@@ -1,0 +1,632 @@
+<html>
+ <head>
+   <title>
+     Traveller
+   </title>
+   
+   <style>
+   
+   body
+{
+top:20%;
+margin:0;
+padding:0;
+font-family: sans-serif;
+background-image:url("img/col5.jpg");
+background-size:3000px 400px;
+background-repeat:no-repeat;
+
+}
+
+	 .card
+ {
+	position:absolute;
+	top:53%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width:1500px ;
+	height:400px;
+	transform-style: preserve-3d;
+	perspective: 600%;
+	transition: 0.5s;
+ }
+	
+	.card .front
+	{
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height:50%;
+		background:#000;
+		backface-visibility: hidden;
+		transform:rotateX(0deg);
+		transition: 1.0s;
+		
+		 
+	}
+		
+		
+	
+.card:hover .front
+{
+		transform: rotateX(180deg);
+	
+}
+	.card .front .details h2
+			{
+				
+				margin: 0;
+				padding: 0;
+				font-size: 24px;
+				color:#fff;
+			}
+ 
+	
+		.card .back
+	{
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height:50%;
+		background:#fff;
+		backface-visibility: hidden;
+		transform:rotateX(180deg);
+		transition: 1.0s;
+	}
+	
+		.card:hover .back
+		{
+			
+			transform: rotateX(0deg);
+		}
+		
+			.card .back .details
+			{
+			position: absolute;
+			top: 10%;
+			transform: translateY(-50);
+			left: 0;
+			width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+			}
+			
+			.card .back .details h2
+			{
+				
+				margin: 0;
+				padding: 0;
+				font-size: 24px;
+				color:#000;
+			}
+			
+			.design
+{
+width:200px;
+height:30px;
+background-color:lightgray;
+
+}
+
+    
+  
+.container
+{
+width:1200px;
+margin:30px auto 0;
+display:flex;
+float-direction:row;
+
+}
+
+.container .box
+{
+position:relative;
+width:300px;
+height:300px;
+background:#ff0;
+margin:10px;
+box-sizing:border-box;
+display:inline-block;
+}
+
+.container .box .imgBox
+{
+position:relative;
+overflow:hidden;
+}
+
+.container .box .imgBox img
+{
+width:300px;
+height:300px;
+transition:transform 2s;
+}
+
+.container .box:hover .imgBox img
+{
+transform:scale(1.2);
+}
+
+.container .box .details
+{
+position:absolute;
+top:10px;
+left:10px;
+bottom:10px;
+right:10px;
+background:rgba(0,0,0,.8);
+transform:scaleY(0);
+transition:transform .5s;
+}
+
+.container .box:hover .details
+{
+transform:scaleY(1);
+}
+
+.container .box .details .content
+{
+position:absolute;
+top:1%;
+bottom:10%;
+right:10%%;
+left:10%
+transform:translateY(-50%);
+padding:15px;
+color:#fff;
+}
+
+.container .box .details .content h2
+{
+margin:0;
+padding:0;
+font-size:20px;
+color:#ff0;
+}
+
+.container .box .details .content p
+{
+margin:10px 0 0;
+padding:0;
+}
+
+nav
+{
+width:100%;
+background:black;
+overflow:auto;
+}
+
+ul
+{
+padding:0;
+margin:0 0 0 150px;
+list-style:none;
+}
+
+li
+{
+float:left;
+}
+
+.logo img
+{
+width:10%;
+height:8%;
+position:absolute;
+}
+
+nav a
+{
+width:100px;
+display:block;
+padding:20px 15px;
+text-decoration:none;
+font-family:Arial;
+color:#f2f2f2;
+text-align:center;
+}
+
+nav a:hover
+{
+background:purple;
+transition:0.5s;
+text-transform:uppercase;
+}
+
+	.box1
+{
+	margin-left:15px;
+	position:relative;
+	width:850px;
+	height:350px;
+	padding:40px;
+	background:rgba(0,0,0,.2);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px  rgba(0,0,0,.5);
+	border-radius:10px;
+
+}
+
+.box1 h2
+{
+	margin:0 0 20px;
+	padding:0;
+	color:black;
+	text-align:center;
+}
+.box1 h4
+{
+	margin:0 0 30px;
+	padding:0;
+	color:black;
+	text-align:left;
+}
+
+	
+		.box2
+{
+	position:relative;
+
+	width:100%;
+	height:100px;
+	padding:20px;
+	background:rgba(0,0,0,.4);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px  rgba(0,0,0,.5);
+	border-radius:10px;
+
+}
+
+ .box2 td img
+{
+position:relative;
+margin:0 0 20px;
+padding:0;
+	
+}
+
+.box2 h4
+{
+	margin:0 0 30px;
+	padding:0;
+	color:black;
+	text-align:center;
+}
+
+.box2 font
+{
+	margin:0 0 30px;
+	padding:0;
+	color:black;
+	text-align:center;
+}
+
+	
+		.box3
+{
+	position:relative;
+
+	width:100%;
+	height:200px;
+	padding:20px;
+	background:rgba(0,0,0,0);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px  rgba(0,0,0,.5);
+	border-radius:10px;
+
+}
+
+		.box4
+{
+	position:relative;
+	width:100%;
+	height:150px;
+	padding:20px;
+	background:rgba(0,0,0,0);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px  rgba(0,0,0,.3);
+	border-radius:10px;
+
+}
+
+button[type=submit]
+{
+	width:10%;
+	box-sizing:border-box;
+	padding:10px 0;
+	margin-top:20px;
+	outline:none;
+	border:none;
+	background:#60adde;
+	opacity:0.7;
+	border-radius:20px;
+	font-size:20px;
+	color:#fff;
+}	
+
+</style>
+
+
+
+
+
+
+ <body>
+ 
+<br>
+   <center>
+   <img src="img/go1.png" height="80" width="200">
+   </center> 
+     <br>
+<div class="logo"<a href="#"><img src="img/go1.png"></a>
+</div>
+
+<nav>
+
+	<ul>
+	
+		<li><a href="traveller.html">Home</a></li>
+		<li><a href="#">Popular</a></li>
+		<li><a href="#aboutus">About Us</a></li>
+		<li><a href="login3.html">Login</a></li>
+	</ul>
+
+ </nav>
+
+  
+  <div class="card">
+		<div class="front"><img src="img/plane2.jpg" width="1500", height="200"/></div>
+		<div class="details">
+		
+		</div>
+		<div class="back">
+		<form action="bs.php" method="POST">
+			<div class="details">
+			<center>
+				<h2>Search Flights<br><span>
+		</center>
+<br>
+<center>
+<font size="5"><b>From:</b></font>&nbsp;
+<select name="Source" id="Source" class="design">
+  <option value="Mumbai">Mumbai</option>
+  <option value="Delhi">Delhi</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Kolkata">Kolkata</option>
+</select>&nbsp;
+<font size="5"><b>To:</b></font>&nbsp;
+				<select name="Destination" id="Destination" class="design">
+  <option value="Mumbai">Mumbai</option>
+  <option value="Delhi">Delhi</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Kolkata">Kolkata</option>
+</select>&nbsp;
+
+<font size="5"><b>No of Seats:</b></font>&nbsp;<input type="text" name="no" required>&nbsp;
+
+
+</center>
+
+<center>
+<button type="submit">Search</button>
+</center>
+			
+				</span></h2>
+			
+			</div>	
+			</form>
+		</div>
+</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	
+<div class="box2">
+<table>
+<tr>
+<td width:"90px">
+<img src="img/img.jpg" height="60px", width="70px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<font size="6"> Introducing Best Price Guarantee </font><font size="4">on International Flights</font>
+<h4>Get the Lowest fare on INTERNATIONAL FLIGHTS or 10X THE DIFFERENCE*!</h4>
+</td>
+</tr>
+</table>
+</div>
+
+
+<div class="box3">
+<center><h1>Why Book With Us?</h1></center>
+<table>
+<tr>
+
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="img/chair.jpg" height="50px", width="50px"/>&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<h2>GoBirdy Trust</h2>
+<font size="4">1 out of 6 flight passengers in India is a GoBirdy Customer</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td>
+<img src="img/rupee.jpg" width="50px", height="50px"/>&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<h2>Lowest Fares</h2>
+Get Lowest Fares for all your Travel Needs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img src="img/offer.jpg" width="50px", height="50px"/>&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<h2>Exclusive Offers</h2>
+Avail exciting offers on Bank Cards 
+</td>
+
+</tr>
+</table>
+</div>
+
+<br><br>	
+	<a name="aboutus">
+	<table>
+<tr>
+<td>
+<div class="box1">	
+	<h2>About us</h2>
+	<p><h4>
+GoBirdy’s mission is to become India’s preferred low-cost airline,delivering the lowest air fares<br>
+with the highest consumer value,to price sensitive consumers to fulfill everyone’s dream of flying!<br>
+GoBirdy’s  vision is to address that and ensure that flying is for everyone.<br>
+The power to fly for everyone with a dynamic fare structure. <br>
+	</h4></p>
+	<h2>Careers</h2>
+	<p><h4>
+	At GoBirdy, we believe that our people are our greatest asset. We are always on a lookout for highly<br>
+	motivated individuals who can collaborate with like-minded people in an environment that embraces<br> 
+	individuality and rewards your best work. A career opportunity at GoBirdy airlines will entail you to unlimited 
+	opportunities and a host of benefits. Come, be a part of GoBirdy airlines.<br>
+	</h4></p>
+	</div>
+</td>
+
+
+
+<td>
+<link rel="stylesheet" href="photo.css"/>
+<script type="text/javascript" script src="jquery-2.1.4.min (1).js"></script>
+<script type="text/javascript" script src="jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$('#slider').cycle({
+	fx:			'scrollHorz',
+	timeout:		2000,
+	next:"#next",
+	prev:"#prev",
+	pager:"#pager"
+	
+	
+	
+	});
+</script>
+<div id="hero">
+					<div id="pager"></div>
+					<div id="next"></div>
+					<div id="prev"></div>
+					<div id="slider">
+						<div class="slider-items">
+						<img src="img/a.jpg"/>
+						</div>
+
+						<div class="slider-items">
+						<img src="img/b.jpg"/>
+						</div>
+
+
+						<div class="slider-items">
+						<img src="img/c.jpg"/>
+						</div>
+
+
+						<div class="slider-items">
+						<img src="img/d.jpg"/>
+						</div>
+
+
+						<div class="slider-items">
+						<img src="img/e.jpg"/>
+						</div>
+
+
+						<div class="slider-items">
+						<img src="img/f.jpg"/>
+						
+						</div>
+
+
+
+					</div>
+</div>
+</td>
+</tr>
+</table>
+</a>
+
+
+<div class="box4">
+	<center><h1><font style="Arial", color="#295C7A">Unleash the traveller inside you</font></h1></center>
+	<center><h2>Discover our top destinations</h2></center>
+</div>
+	<div class="container">
+
+	<div class="box">
+		<div class="imgBox">
+			<img src="img/drive.jpg">
+		</div>
+		
+		<div class="details">
+			<div class="content">
+			 <h2>Marine Drive, Mumbai</h2>
+				<p>Marine Drive is a 3.6-kilometre-long Boulevard in South Mumbai in the city of Mumbai, India.
+				The road was constructed by late philanthropist Bhagojisheth Keer & Pallonji Mistry.
+				 </p>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="imgBox">
+			<img src="img/museum.jpg">
+		</div>
+		
+		<div class="details">
+			<div class="content">
+			 <h2> Madras Museum, Chennai</h2>
+				<p>The Government Museum or Madras Museum is a museum of human history and culture located in the neighbourhood of Egmore in Chennai, India.
+				Started in 1851, it is the second oldest museum in India after the Indian Museum in Kolkata. 
+				It is particularly rich in archaeological and numismatic collections.
+				 </p>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="imgBox">
+			<img src="img/howrah.jpg">
+			
+			<div class="details">
+			<div class="content">
+			 <h2>Howrah Bridge, Kolkata</h2>
+				<p>It is a bridge with a suspended span over the Hooghly River in West Bengal, India.
+				Commissioned in 1943,the bridge was originally named the New Howrah Bridge, because it replaced a pontoon bridge at the same 
+				location linking the two cities of Howrah and Kolkata.It was renamed Rabindra Setu after the great Bengali 
+				poet Rabindranath Tagore. 
+				 </p>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="imgBox">
+			<img src="img/fort1.jpg">
+			
+			<div class="details">
+			<div class="content">
+			 <h2>Red Fort, Delhi</h2>
+				<p>Red Fort is a historic fort in the city of Delhi in India.
+				It was the main residence of the emperors of the Mughal dynasty for nearly 200 years, until 1856. 
+				It is located in the center of Delhi and houses a number of museums. 
+				 </p>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<br><br>
+
+<a href="admin_login.html">Admin</a>
+ </body>
+</html>
